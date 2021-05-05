@@ -14,8 +14,11 @@ const Exam = Object.create(null);
 //    for example:
 //      an input list of [1,2,3,4,5,6,7,8]
 //      returns [1,4,7]
-Exam.every_third = function () {
-    return;
+Exam.every_third = function (oldArr) {
+    var newArr = oldArr.filter(function ( value, index, Arr ) {
+        return index % 3 === 0;
+    });
+    return newArr;
 };
 
 
