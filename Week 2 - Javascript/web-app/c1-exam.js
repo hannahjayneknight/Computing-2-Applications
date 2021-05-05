@@ -9,7 +9,7 @@ const Exam = Object.create(null);
 
 // Lists
 
-// Write a function that returns a list containig every third item in
+// Write a function that returns a list containing every third item in
 // the original list starting with the first item.
 //    for example:
 //      an input list of [1,2,3,4,5,6,7,8]
@@ -20,6 +20,8 @@ Exam.every_third = function (oldArr) {
     });
     return newArr;
 };
+
+Exam.sequence = (n) => Array.from(new Array(n).keys());
 
 
 // Strings
@@ -32,8 +34,19 @@ Exam.every_third = function (oldArr) {
 //       the input sentences "the cow jumped over the moon" and
 //                            "jack and jill went up the"
 //       returns "the jack cow and jumped jill over went the up moon the"
-Exam.merge_sentences = function () {
-    return;
+Exam.merge_sentences6 = function (sentence1, sentence2) {
+    if (sentence1.split(" ").length === sentence2.split(" ").length) {
+        var a = sentence1.trim().split(" ");
+        var b = sentence2.trim().split(" ");
+        var c = "";
+        sequence(sentence1.split(" ").length).forEach( (e) => {
+            c += a[e];
+            c += b[e];
+    });
+    return c; // DOESN'T ADD SPACES
+    } else {
+        throw "ValueError";
+    }
 };
 
 // Write a function that returns the number of lowercase letters in
@@ -41,8 +54,8 @@ Exam.merge_sentences = function () {
 //     for example:
 //          the input "sPonGe bOb"
 //          returns 6
-Exam.lowercase_count = function () {
-    return;
+Exam.lowercase_count = function (sentence) {
+    return sentence.length - sentence.replace(/[A-Z]/g, "").length;
 };
 
 
@@ -68,8 +81,8 @@ Exam.value_greatest_even = function () {
 //
 // The username argument should not be set to a default,
 // but the location argument should default to "London".
-Exam.greeting = function () {
-    return;
+Exam.greeting = function (username, location="London") {
+    return "Hello, " + username + ", how is " + location + "?";
 };
 
 
@@ -80,8 +93,13 @@ Exam.greeting = function () {
 //     offset with a default of 0
 // The function returns the calculation x * scalar + offset for the input x
 // if the output value of the calculation is positive, otherwise it returns 0.
-Exam.floor_line = function () {
-    return;
+Exam.floor_line = function (x, scalar=1, offset=0) {
+    var output = x * scalar + offset;
+    if (output > 0) {
+        return output;
+    } else {
+        return 0;
+    }
 };
 
 export default Object.freeze(Exam);
