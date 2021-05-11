@@ -14,11 +14,16 @@ const Exam = Object.create(null);
 //    for example:
 //      an input list of [1,2,3,4,5,6,7,8]
 //      returns [1,4,7]
+<<<<<<< HEAD
 Exam.every_third = function (oldArr) {
     var newArr = oldArr.filter(function ( value, index, Arr ) {
         return index % 3 === 0;
     });
     return newArr;
+=======
+Exam.every_third = function (array) {
+    return array.filter((ignore, k) => k % 3 === 0);
+>>>>>>> upstream/master
 };
 
 Exam.sequence = (n) => Array.from(new Array(n).keys());
