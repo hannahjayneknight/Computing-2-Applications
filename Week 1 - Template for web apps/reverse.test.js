@@ -1,5 +1,5 @@
 import fc from "fast-check";
-import Reverse from "../reverse.js";
+import Reverse from "./web-app/reverse.js";
 
 // This test intentionally has a bug in it that you should fix.
 // There is also a jslint error which should give a hint.
