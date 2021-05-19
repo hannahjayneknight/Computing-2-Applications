@@ -4,7 +4,7 @@ import FP from "../functional.js";
 import Deck from "../deck.js";
 
 /** Arbitrary for a 52-card deck
- * shuffled using the Fisher-Yates algorithm */
+ * shuffled using the Fisnpm install --save-dev fast-checkher-Yates algorithm */
 const arbitrary_shuffled_deck = fc.tuple(
     ...FP.sequence(52).map((n) => fc.nat(51 - n))
 ).map(function (positions) {
