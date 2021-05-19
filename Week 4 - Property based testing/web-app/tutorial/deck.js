@@ -79,6 +79,16 @@ Deck.decks_equal = (deck_1, deck_2) => (
  * https://en.wikipedia.org/wiki/Faro_shuffle
  */
 Deck.faro_out_shuffle = function (deck) {
+    // we want to rearrange into the following order:
+    // deck[1], deck[length.deck + 1], deck[2], deck[length.deck + 2]....
+
+    // create new empty array
+    // for each in deck
+    // push the first element
+    // push length.deck + 1 element
+    // etc
+    // when you reach the length.deck/ 2 element --> stop
+
     return deck; // Placeholder implementation.
 };
 
@@ -89,6 +99,8 @@ Deck.faro_out_shuffle = function (deck) {
  * https://en.wikipedia.org/wiki/Faro_shuffle
  */
 Deck.faro_in_shuffle = function (deck) {
+    // perform the out-shuffle
+    // switch every pair within the array
     return deck; // Placeholder implementation.
 };
 
